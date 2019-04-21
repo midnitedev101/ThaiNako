@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThaiNako</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top tn_navContainer">
+      <div class="container">
+        <%= link_to image_tag("ThaiNako.jpg", alt: "ThaiNako_logo"), '#' %>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navmenu_item"><%= link_to "Home", '/static_pages/home' %></li>
+            <li class="navmenu_item"><%= link_to "Appetizers", '/static_pages/appetizers' %></li>
+            <li class="navmenu_item"><%= link_to "Entrees", '/static_pages/entrees' %></li>
+            <li class="navmenu_item"><%= link_to "Dessert", '/static_pages/dessert' %></li>
+            <li class="navmenu_item"><%= link_to "Drinks", '/static_pages/drinks' %></li>
+            <li class="navmenu_item"><%= link_to "Contact", '/static_pages/contact' %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <div>Copyright ©<span class="yearText"></span> ThaiNako. All Rights Reserved.</div>
+    </footer>
+  </body>
+</html>

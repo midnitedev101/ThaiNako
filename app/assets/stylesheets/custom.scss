@@ -1,0 +1,411 @@
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+
+@font-face {
+  font-family: "Kaushan Script Regular";
+  src: url(/assets/fonts/KaushanScript-Regular.ttf);
+}
+
+body {
+  padding-top: 12rem;
+  // overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(#000, #9d2701, #000);
+}
+
+body > .container {
+  height: 100%;
+  width: 100%;
+  // overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;                /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/***** Start: General styles *****/
+.container > div > hr.mt-2.mb-5 {
+  background-color: #fff;
+}
+/***** End: General styles *****/
+
+/***** Start: Styles for navigation menu *****/
+.tn_navContainer {
+  background-color: #fff;
+  font-family: 'Kaushan Script', cursive;
+  max-height: 100vh;
+  overflow-y:auto;
+  border-bottom: 0.5rem solid #9d2701;
+}
+
+#navbarCollapse {
+  margin-top: 1rem;
+}
+
+.navmenu_item {
+  margin: 1rem auto;
+}
+
+.navmenu_item > a {
+  color: #000;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 1s;
+  width: 8rem;
+  display: block;
+  padding: 0 1vw;
+  text-align: center;
+  position: relative;
+}
+
+.navmenu_item > a:hover {
+  zoom: 110%;
+  color: #9d2701;
+  text-shadow: 0 0 0.05rem #9d2701;
+}
+
+.navbar-light .navbar-toggler {
+  border: 0.25rem solid #9d2701;
+}
+
+.navbar-light .navbar-toggler:focus {
+  outline: none;
+}
+
+.navmenu_item > a:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  left: 0;
+  right: 0;
+  background-color: #9d2701;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 0 1vw;
+}
+
+.navmenu_item:hover > a:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+@media screen and (min-width: 768px) {
+  .navmenu_item > a:before {
+    // display: block;
+    // text-align: center;
+    // width: 100%;
+    // padding: 0 1vw;
+    // position: absolute;
+  }
+
+  .navmenu_item > a {
+    display: inline-block;
+    // padding: 0 1vw;
+    // width: 8rem;
+    // position: relative;
+    // text-align: center;
+  }
+}
+/***** End: Styles for navigation menu *****/
+
+/***** Start: Styles for Home Page *****/
+.home {
+  margin: 0 auto;
+  height: 100vh;
+  padding: 1rem 0 10rem 0;
+  background-image: url("/assets/pad-thai-921884_1280.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: gray;
+  background-blend-mode: screen;
+  box-shadow: 0 0 0.25rem 0.025rem #000
+}
+
+.home__section {
+  position: absolute;
+  // background-color: #61ac27;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// .home__section.open {
+//   height: 100%;
+//   background-color: #61ac27;
+//   visibility: visible;
+// }
+
+.home__section h1 {
+  text-align: center;
+  display: block;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 0 0 0.025rem #000;
+  // justify-content: center;
+  margin-top: 20rem;
+}
+
+.home__section > h1 > span {
+  display: inline-flex;
+  justify-content: center;
+  margin: 0.5rem auto;
+}
+
+.home__section > h1 > span > div {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 0.05rem;
+}
+
+@media screen and (min-width: 768px) {
+  .home__section h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: unset;
+  }
+
+  .home__section > h1 > span {
+    // display: flex;
+    margin: unset;
+  }
+
+  .home__section > h1 > span > div {
+    display: inline-flex;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .home__section > h1 > span > div {
+    font-size: 3vw;
+  }
+}
+
+.thainako_svg {
+  position: absolute;
+  margin-top: -10rem;
+  width: 200px;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .thainako_svg {
+    // margin-top: -5rem;
+  }
+}
+
+.thainako_svg svg {
+  fill: #9d2701;
+}
+
+.thainako_svg svg g {
+  stroke: #fff;
+}
+
+.thainako_svg svg g polygon, .thainako_svg svg g path {
+  stroke: #9d2701;
+  stroke-width: 3;
+  stroke-linecap: "round";
+  stroke-opacity: 20;
+  // stroke-dasharray: 2 2 2 2 2;
+}
+/***** End: Styles for Home Page *****/
+
+/***** Start: Styles for Appetizers Page *****/
+.appetizers {
+  // overflow: auto;
+  // height: 100vh;
+  padding: 1rem 0 20rem 0;
+  color: #fff;
+}
+
+.appetizers > div > div {
+    margin: 0 auto;
+}
+
+.food.description {
+  font-size: 0.85rem;
+  margin: 0.5rem auto 2rem auto;
+}
+
+.food.header {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.food.title {
+  text-align: center;
+  word-break: break-all;
+  max-height: 4.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 1rem;
+}
+
+.food.price {
+  text-align: center;
+  display: block;
+  font-weight: 500;
+}
+/***** End: Styles for Appetizers Page *****/
+
+/***** Start: Styles for Dessert Page *****/
+.dessert {
+  // overflow: auto;
+  // height: 100vh;
+  padding: 1rem 0 20rem 0;
+  color: #fff;
+}
+
+.dessert > div > div {
+    margin: 0 auto;
+}
+/***** End: Styles for Dessert Page *****/
+
+/***** Start: Styles for Entrees Page *****/
+.entrees {
+  // overflow: auto;
+  // height: 100vh;
+  padding: 1rem 0 20rem 0;
+  color: #fff;
+}
+
+.entrees > div > div {
+    margin: 0 auto;
+}
+/***** End: Styles for Entrees Page *****/
+
+/***** Start: Styles for Drinks Page *****/
+.drinks {
+  // overflow: auto;
+  // height: 100vh;
+  padding: 1rem 0 20rem 0;
+  color: #fff;
+}
+
+.drinks > div > div {
+    margin: 0 auto;
+}
+/***** End: Styles for Drinks Page *****/
+
+/***** Start: Styles for Contact page *****/
+.contact {
+  // overflow: auto;
+  // height: 100vh;
+  padding: 1rem 0 20rem 0;
+  color: #fff;
+}
+
+.contact__info {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact__info > div {
+  margin: 5rem auto;
+}
+
+.contactNum {
+  color: #fff;
+  text-shadow: 0 0 0.15rem #000;
+}
+
+.contactNum:hover {
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.location {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: 2rem auto;
+    box-shadow: 0 0 0.25rem 0.025rem #000;
+}
+
+.location > * {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.contactForm {
+  margin: 2rem auto;
+}
+
+.contactForm > button {
+  background-color: #000;
+  border-color: #272727;
+}
+
+.contactForm > button:hover {
+  background-color: #9d2701;
+  border-color: #9d2701;
+  color: #000;
+}
+
+.openTimes {
+  margin: 0 auto 1rem auto;
+}
+
+.openTimes td {
+  width: 10rem;
+}
+
+.openTimes td:nth-of-type(1) {
+  text-align: left;
+}
+
+.openTimes > span {
+  // display: block;
+}
+/***** End: Styles for Contact Page *****/
+
+/***** Start: Styles for Footer Section *****/
+footer {
+  margin-top: 2rem;
+  height: 3rem;
+  // background-color: #9d2701;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+footer > div {
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 700;
+  // text-shadow: 0 0 0.01rem;
+  letter-spacing: 0.05rem;
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+/***** End: Styles for Footer Section *****/
