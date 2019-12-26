@@ -126,7 +126,8 @@ body > .container {
   margin: 0 auto;
   height: 100vh;
   padding: 1rem 0 10rem 0;
-  background-image: url("/assets/pad-thai-921884_1280.jpg");
+  // background-image: url("/assets/pad-thai-921884_1280.jpg");
+  background-image: asset-url("pad-thai-921884_1280.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: gray;
