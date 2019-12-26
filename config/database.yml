@@ -13,7 +13,7 @@ default: &default
 development:
   <<: *default
   # database: db/development.sqlite3
-  database: thainako_development
+  database: db/thainako_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -21,9 +21,9 @@ development:
 test:
   <<: *default
   # database: db/test.sqlite3
-  database: thainako_test
+  database: db/thainako_test
 
 production:
   <<: *default
   # database: db/production.sqlite3
-  database: thainako_production
+  database: db/thainako_production
