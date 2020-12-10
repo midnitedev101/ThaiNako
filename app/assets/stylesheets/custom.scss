@@ -7,7 +7,7 @@
 }
 
 body {
-  padding-top: 12rem;
+  // padding-top: 12rem;
   // overflow: hidden;
   height: 100%;
   width: 100%;
@@ -18,6 +18,14 @@ body > .container {
   height: 100%;
   width: 100%;
   // overflow: hidden;
+  margin-top: 15rem;
+}
+
+@media screen and (min-width: 222px) {
+  body > .container {
+    margin-top: unset;
+    margin-top: 12rem;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -68,10 +76,17 @@ body > .container {
 
 .navbar-light .navbar-toggler {
   border: 0.25rem solid #9d2701;
+  margin: 1rem auto;
 }
 
 .navbar-light .navbar-toggler:focus {
   outline: none;
+}
+
+@media screen and (min-width: 222px) {
+  .navbar-light .navbar-toggler {
+    margin: unset;
+  }
 }
 
 .navmenu_item > a:before {
@@ -152,13 +167,29 @@ body > .container {
 //   visibility: visible;
 // }
 
+.ThaiNako_logo {
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 322px) {
+  .ThaiNako_logo {
+      margin: unset;
+  }
+}
+
 .home__section h1 {
   text-align: center;
   display: block;
   font-family: 'Kaushan Script', cursive;
   text-shadow: 0 0 0.025rem #000;
   // justify-content: center;
-  margin-top: 20rem;
+  margin: 40rem auto 0 auto;
+}
+
+@media screen and (min-width: 344px) {
+  .home__section h1 {
+    margin: 35rem auto 0 auto;
+  }
 }
 
 .home__section > h1 > span {
@@ -254,7 +285,7 @@ body > .container {
 
 .food.title {
   text-align: center;
-  word-break: break-all;
+  word-break: break-word;
   max-height: 4.5rem;
   font-size: 1.05rem;
   font-weight: 500;
