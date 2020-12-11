@@ -56,6 +56,12 @@ body > .container {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+      justify-content: flex-end;
+  }
+}
+
 .navmenu_item {
   margin: 1rem auto;
 }
