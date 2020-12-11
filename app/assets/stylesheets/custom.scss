@@ -185,12 +185,17 @@ body > .container {
 
 .ThaiNako_logo {
     margin: 0 auto;
+    max-width: 5rem;
 }
 
 @media screen and (min-width: 222px) {
   .ThaiNako_logo {
       margin: unset;
   }
+}
+
+.ThaiNako_logo img {
+  width: 100%;
 }
 
 .home__section h1 {
